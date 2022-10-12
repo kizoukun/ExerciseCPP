@@ -1,18 +1,20 @@
 #include <iostream>
 #include <ctime>
-#include <cstring> // use string for array of character
 using namespace std;
 
+int sum(int start, int end) {
+    int sum = 0;
+    for(int i=start; i <= end ;i++) {
+        sum += i;
+    }
+    return sum;
+}
+
 int main() {
+    cout << "Sum from 1 to 10 is " << sum(1, 10) << endl;
+    cout << "Sum from 2 to 20 is " << sum(2, 20) << endl;
+    cout << "Sum from 3 to 30 is " << sum(3, 30) << endl;
 
-    char myname[28] = "Yudhistira Fauzy Achmadarel";
-    char firstname[11];
-    char fullname[28];
-    strcpy(fullname, myname);
-    strncpy(firstname, myname, 10);
-
-    cout << "My First Name is " << firstname << endl;
-    cout << "My full name is " << fullname << endl;
 
 
     cout << "----------------------------------------------------------" << endl;
@@ -24,3 +26,4 @@ int main() {
     cout << "----------------------------------------------------------" << endl;
     return 0;
 }
+
